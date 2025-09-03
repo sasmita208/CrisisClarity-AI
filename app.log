@@ -1,0 +1,8 @@
+[2025-09-03 10:06:16,202] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-03 10:06:16,424] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-03 10:06:16,428] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-03 10:06:17,239] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31251
+[2025-09-03 10:07:21,043] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-03 10:07:21,246] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-03 10:07:21,251] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-03 10:07:21,387] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31249

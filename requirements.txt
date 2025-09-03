@@ -1,5 +1,4 @@
-fastapi
-uvicorn
+feedparser
+beautifulsoup4
 requests
 python-dotenv
-python-whois
