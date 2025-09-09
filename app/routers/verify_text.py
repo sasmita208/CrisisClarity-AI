@@ -1,18 +1,17 @@
+# app/routers/verify_text.py
 from fastapi import APIRouter
 from pydantic import BaseModel
+from app.services.text_verifier import verify_text_claim
 
-router = APIRouter(prefix="/verify_text", tags=["Text Verification"])
+router = APIRouter()
 
-class TextRequest(BaseModel):
+class TextClaimRequest(BaseModel):
     claim: str
 
-@router.post("/")
-async def verify_text(payload: TextRequest):
-    """
-    Stub endpoint for text claim verification.
-    Currently just echoes back the claim with placeholder status.
-    """
+@router.post("/verify_text/")
+def verify_text(request: TextClaimRequest):
+    result = verify_text_claim(request.claim)
     return {
-        "claim": payload.claim,
-        "status": "pending_verification"
+        "claim": request.claim,
+        **result
     }
