@@ -6,3 +6,8 @@
 [2025-09-03 10:07:21,246] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
 [2025-09-03 10:07:21,251] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
 [2025-09-03 10:07:21,387] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31249
+[2025-09-09 22:51:45,096] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-09 22:51:45,315] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-09 22:51:45,316] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-09 22:51:46,040] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31870
+[2025-09-09 22:51:47,165] [INFO] [__main__]: No direct matches for 'flood warning delhi', falling back to latest RSS fact-checks.
