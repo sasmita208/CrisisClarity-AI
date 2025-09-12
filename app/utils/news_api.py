@@ -108,29 +108,29 @@ def search_news(
             logger.warning(f"NewsAPI error → fallback to GNews: {e}")
 
     # ----- GNews (fallback) -----
-    if settings.GNEWS_API_KEY:
-        try:
-            params = {
-                "q": query,
-                "lang": lang,
-                "country": country, # 'in' biases to India
-                "token": settings.GNEWS_API_KEY,
-                "max": gnews_max,
+    #if settings.GNEWS_API_KEY:
+     #   try:
+      #      params = {
+       #         "q": query,
+        #        "lang": lang,
+         #       "country": country, # 'in' biases to India
+          #      "token": settings.GNEWS_API_KEY,
+           #     "max": gnews_max,
                 # "in": "title,description,content",  # uncomment to restrict fields GNews searches
                 # "from": "2025-08-01",              # optionally restrict date window
-            }
-            r = requests.get(GNEWS_URL, params=params, timeout=12)
-            r.raise_for_status()
-            data = r.json()
-            articles = data.get("articles", [])
-            if articles:
-                logger.info(f"GNews: {len(articles)} raw hits for '{query}'")
-                return _normalize(articles, "GNews", limit=8)
-            else:
-                logger.info(f"GNews: 0 hits for '{query}'")
-        except Exception as e:
-            logger.error(f"GNews error: {e}")
-
-    logger.info("No news/evidence found or no API key set.")
-    return []
+            #}
+            #r = requests.get(GNEWS_URL, params=params, timeout=12)
+            #r.raise_for_status()
+           # data = r.json()
+            #articles = data.get("articles", [])
+          #  if articles:
+           #     logger.info(f"GNews: {len(articles)} raw hits for '{query}'")
+     #           return _normalize(articles, "GNews", limit=8)
+    #        else:
+   #             logger.info(f"GNews: 0 hits for '{query}'")
+  #      except Exception as e:
+ #           logger.error(f"GNews error: {e}")
+#
+   # logger.info("No news/evidence found or no API key set.")
+    #return []
 

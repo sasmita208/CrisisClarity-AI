@@ -15,13 +15,14 @@ def root():
 # app/main.py
 
 from fastapi import FastAPI
-from app.routers import verify_link, verify_text
+from app.routers import verify_link, verify_text, factcard
 
 app = FastAPI(title="CrisisClarity AI Backend")
 
 # Routers
 app.include_router(verify_link.router)
 app.include_router(verify_text.router)
+app.include_router(factcard.router)
 
 @app.get("/")
 def root():
