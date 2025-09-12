@@ -1,7 +1,9 @@
-feedparser
-beautifulsoup4
-requests
-python-dotenv
 fastapi
 uvicorn
 requests
+beautifulsoup4
+feedparser
+python-dotenv
+python-whois
+requests
+cachetools       

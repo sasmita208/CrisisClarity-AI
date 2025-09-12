@@ -6,8 +6,180 @@
 [2025-09-03 10:07:21,246] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
 [2025-09-03 10:07:21,251] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
 [2025-09-03 10:07:21,387] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31249
-[2025-09-09 22:51:45,096] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
-[2025-09-09 22:51:45,315] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
-[2025-09-09 22:51:45,316] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
-[2025-09-09 22:51:46,040] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31870
-[2025-09-09 22:51:47,165] [INFO] [__main__]: No direct matches for 'flood warning delhi', falling back to latest RSS fact-checks.
+[2025-09-04 23:50:31,324] [INFO] [__main__]: Gathering evidence for: flood warning delhi
+[2025-09-04 23:50:31,326] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-04 23:50:31,566] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-04 23:50:31,568] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-04 23:50:32,365] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31247
+[2025-09-04 23:50:33,392] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-04 23:50:33,808] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=flood+warning+delhi&language=en&sortBy=relevancy&apiKey=2c1cbf8ace754b91a8b23ec649094570 HTTP/1.1" 200 None
+[2025-09-04 23:50:33,814] [INFO] [app.utils.news_api]: NewsAPI: 56 hits for 'flood warning delhi'
+[2025-09-04 23:50:33,816] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-04 23:50:33,998] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&key=AIzaSyD_hH7jMoclycR3sKNd4bOG8kaFsniLneU HTTP/1.1" 403 None
+[2025-09-04 23:50:34,000] [ERROR] [app.utils.google_factcheck]: Google Fact Check error: 403 Client Error: Forbidden for url: https://factchecktools.googleapis.com/v1alpha1/claims:search?query=flood+warning+delhi&key=AIzaSyD_hH7jMoclycR3sKNd4bOG8kaFsniLneU
+[2025-09-05 00:03:52,175] [INFO] [__main__]: Gathering evidence for: flood warning delhi
+[2025-09-05 00:03:52,175] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-05 00:03:52,359] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-05 00:03:52,362] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-05 00:03:53,161] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31373
+[2025-09-05 00:03:54,041] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-05 00:03:54,429] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=flood+warning+delhi&language=en&sortBy=relevancy&apiKey=2c1cbf8ace754b91a8b23ec649094570 HTTP/1.1" 200 None
+[2025-09-05 00:03:54,672] [INFO] [app.utils.news_api]: NewsAPI: 56 hits for 'flood warning delhi'
+[2025-09-05 00:03:54,672] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:03:55,222] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q HTTP/1.1" 200 None
+[2025-09-05 00:09:17,963] [INFO] [__main__]: Gathering evidence for: flood warning delhi
+[2025-09-05 00:09:17,968] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-05 00:09:19,646] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-05 00:09:19,655] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-05 00:09:20,271] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31362
+[2025-09-05 00:09:21,121] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-05 00:09:21,711] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=flood+warning+delhi&language=en&sortBy=relevancy&apiKey=2c1cbf8ace754b91a8b23ec649094570 HTTP/1.1" 200 None
+[2025-09-05 00:09:21,934] [INFO] [app.utils.news_api]: NewsAPI: 56 hits for 'flood warning delhi'
+[2025-09-05 00:09:21,942] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:09:22,485] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&reviewPublisherSiteFilter=altnews.in&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q HTTP/1.1" 200 None
+[2025-09-05 00:09:22,485] [INFO] [app.utils.google_factcheck]: Google Fact Check returned 0 items for 'flood warning delhi' (publisher=altnews.in)
+[2025-09-05 00:11:59,576] [INFO] [__main__]: Gathering evidence for: flood warning delhi
+[2025-09-05 00:11:59,580] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-05 00:11:59,771] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-05 00:11:59,772] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-05 00:11:59,846] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31361
+[2025-09-05 00:12:00,770] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-05 00:12:02,106] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=flood+warning+delhi&language=en&sortBy=relevancy&apiKey=2c1cbf8ace754b91a8b23ec649094570 HTTP/1.1" 200 None
+[2025-09-05 00:12:02,601] [INFO] [app.utils.news_api]: NewsAPI: 56 hits for 'flood warning delhi'
+[2025-09-05 00:12:02,601] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:12:03,041] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=altnews.in HTTP/1.1" 200 None
+[2025-09-05 00:12:03,047] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:12:03,499] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=boomlive.in HTTP/1.1" 200 None
+[2025-09-05 00:12:03,510] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:12:04,010] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=factly.in HTTP/1.1" 200 None
+[2025-09-05 00:12:04,010] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:12:04,428] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=indiatoday.in HTTP/1.1" 200 None
+[2025-09-05 00:12:04,436] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:12:04,765] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=aajtak.in HTTP/1.1" 200 None
+[2025-09-05 00:12:04,779] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:12:05,110] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=afp.com HTTP/1.1" 200 None
+[2025-09-05 00:12:05,121] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:12:05,557] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q HTTP/1.1" 200 None
+[2025-09-05 00:12:05,559] [INFO] [app.utils.google_factcheck]: No fact-checks found for 'flood warning delhi' with given publishers.
+[2025-09-05 00:19:35,453] [INFO] [__main__]: Gathering evidence for: flood warning delhi
+[2025-09-05 00:19:35,455] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-05 00:19:35,649] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-05 00:19:35,654] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-05 00:19:36,311] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31875
+[2025-09-05 00:19:37,589] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-05 00:19:38,009] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=flood+warning+delhi&language=en&sortBy=relevancy&apiKey=2c1cbf8ace754b91a8b23ec649094570 HTTP/1.1" 200 None
+[2025-09-05 00:19:38,015] [INFO] [app.utils.news_api]: NewsAPI: 56 hits for 'flood warning delhi'
+[2025-09-05 00:19:38,020] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:19:38,373] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=altnews.in HTTP/1.1" 200 None
+[2025-09-05 00:19:38,389] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:19:38,733] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=boomlive.in HTTP/1.1" 200 None
+[2025-09-05 00:19:38,733] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:19:39,233] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=factly.in HTTP/1.1" 200 None
+[2025-09-05 00:19:39,239] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:19:39,628] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=indiatoday.in HTTP/1.1" 200 None
+[2025-09-05 00:19:39,634] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:19:39,938] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=aajtak.in HTTP/1.1" 200 None
+[2025-09-05 00:19:39,938] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:19:40,435] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=afp.com HTTP/1.1" 200 None
+[2025-09-05 00:19:40,441] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:19:40,789] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=flood+warning+delhi&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q HTTP/1.1" 200 None
+[2025-09-05 00:19:40,805] [INFO] [app.utils.google_factcheck]: No fact-checks found for 'flood warning delhi' with given publishers.
+[2025-09-05 00:23:29,810] [INFO] [__main__]: Gathering evidence for: fake government order
+[2025-09-05 00:23:29,810] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-05 00:23:29,984] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-05 00:23:29,997] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-05 00:23:30,098] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31873
+[2025-09-05 00:23:31,296] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-05 00:23:32,799] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=fake+government+order&language=en&sortBy=relevancy&apiKey=2c1cbf8ace754b91a8b23ec649094570 HTTP/1.1" 200 None
+[2025-09-05 00:23:33,302] [INFO] [app.utils.news_api]: NewsAPI: 93 hits for 'fake government order'
+[2025-09-05 00:23:33,302] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:23:33,671] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=fake+government+order&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=altnews.in HTTP/1.1" 200 None
+[2025-09-05 00:23:33,671] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:23:34,051] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=fake+government+order&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=boomlive.in HTTP/1.1" 200 None
+[2025-09-05 00:23:34,057] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:23:34,408] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=fake+government+order&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=factly.in HTTP/1.1" 200 None
+[2025-09-05 00:23:34,408] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:23:34,842] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=fake+government+order&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=indiatoday.in HTTP/1.1" 200 None
+[2025-09-05 00:23:34,842] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:23:35,156] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=fake+government+order&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=aajtak.in HTTP/1.1" 200 None
+[2025-09-05 00:23:35,163] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:23:35,581] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=fake+government+order&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=afp.com HTTP/1.1" 200 None
+[2025-09-05 00:23:35,595] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:23:36,002] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=fake+government+order&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q HTTP/1.1" 200 None
+[2025-09-05 00:23:36,005] [INFO] [app.utils.google_factcheck]: No fact-checks found for 'fake government order' with given publishers.
+[2025-09-05 00:27:10,766] [INFO] [__main__]: Gathering evidence for: old image shared as recent
+[2025-09-05 00:27:10,766] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-05 00:27:10,955] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-05 00:27:10,957] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-05 00:27:11,828] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31877
+[2025-09-05 00:27:13,254] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-05 00:27:14,828] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=old+image+shared+as+recent&language=en&sortBy=relevancy&apiKey=2c1cbf8ace754b91a8b23ec649094570 HTTP/1.1" 200 None
+[2025-09-05 00:27:15,369] [INFO] [app.utils.news_api]: NewsAPI: 98 hits for 'old image shared as recent'
+[2025-09-05 00:27:15,370] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:27:15,864] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=altnews.in HTTP/1.1" 200 None
+[2025-09-05 00:27:15,864] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:27:16,381] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=boomlive.in HTTP/1.1" 200 None
+[2025-09-05 00:27:16,384] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:27:16,816] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=factly.in HTTP/1.1" 200 None
+[2025-09-05 00:27:16,818] [INFO] [app.utils.google_factcheck]: Google Fact Check: 1 items from factly.in for 'old image shared as recent'
+[2025-09-05 00:27:16,820] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:27:17,200] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=indiatoday.in HTTP/1.1" 200 None
+[2025-09-05 00:27:17,202] [INFO] [app.utils.google_factcheck]: Google Fact Check: 1 items from indiatoday.in for 'old image shared as recent'
+[2025-09-05 00:27:17,206] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:27:17,550] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=aajtak.in HTTP/1.1" 200 None
+[2025-09-05 00:27:17,562] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:27:17,929] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=afp.com HTTP/1.1" 200 None
+[2025-09-05 00:38:42,710] [INFO] [__main__]: Gathering evidence for: old image shared as recent
+[2025-09-05 00:38:42,714] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-05 00:38:42,917] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-05 00:38:42,929] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-05 00:38:43,471] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31893
+[2025-09-05 00:38:44,639] [INFO] [app.utils.scraper]: No direct matches for 'old image shared as recent', falling back to latest RSS fact-checks.
+[2025-09-05 00:38:46,049] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-05 00:38:47,357] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=old+image+shared+as+recent&language=en&sortBy=relevancy&pageSize=25&apiKey=2c1cbf8ace754b91a8b23ec649094570&domains=thehindu.com%2Cindianexpress.com%2Ctimesofindia.indiatimes.com%2Cndtv.com%2Chindustantimes.com%2Ctheprint.in%2Cscroll.in%2Clivemint.com%2Caajtak.in%2Cindiatoday.in%2Cmoneycontrol.com%2Cbusiness-standard.com HTTP/1.1" 200 None
+[2025-09-05 00:38:47,359] [INFO] [app.utils.news_api]: NewsAPI: 0 hits for 'old image shared as recent' (domains bias applied)
+[2025-09-05 00:38:47,361] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): gnews.io:443
+[2025-09-05 00:38:48,107] [DEBUG] [urllib3.connectionpool]: https://gnews.io:443 "GET /api/v4/search?q=old+image+shared+as+recent&lang=en&country=in&token=635864b21d43d39bcf8ac3159c5d1632&max=15 HTTP/1.1" 403 None
+[2025-09-05 00:38:48,110] [ERROR] [app.utils.news_api]: GNews error: 403 Client Error: Forbidden for url: https://gnews.io/api/v4/search?q=old+image+shared+as+recent&lang=en&country=in&token=635864b21d43d39bcf8ac3159c5d1632&max=15
+[2025-09-05 00:38:48,111] [INFO] [app.utils.news_api]: No news/evidence found or no API key set.
+[2025-09-05 00:38:48,111] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:38:48,669] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=altnews.in HTTP/1.1" 200 None
+[2025-09-05 00:38:48,669] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:38:49,111] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=boomlive.in HTTP/1.1" 200 None
+[2025-09-05 00:38:49,124] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:38:49,512] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=factly.in HTTP/1.1" 200 None
+[2025-09-05 00:38:49,512] [INFO] [app.utils.google_factcheck]: Google Fact Check: 1 items from factly.in for 'old image shared as recent'
+[2025-09-05 00:38:49,512] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:38:49,855] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=indiatoday.in HTTP/1.1" 200 None
+[2025-09-05 00:38:49,856] [INFO] [app.utils.google_factcheck]: Google Fact Check: 1 items from indiatoday.in for 'old image shared as recent'
+[2025-09-05 00:38:49,857] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:38:50,331] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=aajtak.in HTTP/1.1" 200 None
+[2025-09-05 00:38:50,333] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-05 00:38:50,821] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=afp.com HTTP/1.1" 200 None
+[2025-09-12 23:38:14,807] [INFO] [__main__]: Gathering evidence for: old image shared as recent
+[2025-09-12 23:38:14,809] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): pib.gov.in:443
+[2025-09-12 23:38:15,077] [DEBUG] [urllib3.connectionpool]: https://pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 301 0
+[2025-09-12 23:38:15,083] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): www.pib.gov.in:443
+[2025-09-12 23:38:15,816] [DEBUG] [urllib3.connectionpool]: https://www.pib.gov.in:443 "GET /factcheck.aspx HTTP/1.1" 200 31809
+[2025-09-12 23:38:19,041] [INFO] [app.utils.scraper]: No direct matches for 'old image shared as recent', falling back to latest RSS fact-checks.
+[2025-09-12 23:38:20,857] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): newsapi.org:443
+[2025-09-12 23:38:21,406] [DEBUG] [urllib3.connectionpool]: https://newsapi.org:443 "GET /v2/everything?q=old+image+shared+as+recent&language=en&sortBy=relevancy&pageSize=25&apiKey=2c1cbf8ace754b91a8b23ec649094570&domains=thehindu.com%2Cindianexpress.com%2Ctimesofindia.indiatimes.com%2Cndtv.com%2Chindustantimes.com%2Ctheprint.in%2Cscroll.in%2Clivemint.com%2Caajtak.in%2Cindiatoday.in%2Cmoneycontrol.com%2Cbusiness-standard.com HTTP/1.1" 200 None
+[2025-09-12 23:38:21,407] [INFO] [app.utils.news_api]: NewsAPI: 0 hits for 'old image shared as recent' (domains bias applied)
+[2025-09-12 23:38:21,409] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): gnews.io:443
+[2025-09-12 23:38:22,144] [DEBUG] [urllib3.connectionpool]: https://gnews.io:443 "GET /api/v4/search?q=old+image+shared+as+recent&lang=en&country=in&token=635864b21d43d39bcf8ac3159c5d1632&max=15 HTTP/1.1" 403 None
+[2025-09-12 23:38:22,147] [ERROR] [app.utils.news_api]: GNews error: 403 Client Error: Forbidden for url: https://gnews.io/api/v4/search?q=old+image+shared+as+recent&lang=en&country=in&token=635864b21d43d39bcf8ac3159c5d1632&max=15
+[2025-09-12 23:38:22,149] [INFO] [app.utils.news_api]: No news/evidence found or no API key set.
+[2025-09-12 23:38:22,156] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-12 23:38:22,825] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=altnews.in HTTP/1.1" 200 None
+[2025-09-12 23:38:22,829] [INFO] [app.utils.google_factcheck]: Google Fact Check: 10 items from altnews.in for 'old image shared as recent'
+[2025-09-12 23:38:22,836] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-12 23:38:23,364] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=boomlive.in HTTP/1.1" 200 None
+[2025-09-12 23:38:23,373] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-12 23:38:23,891] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=factly.in HTTP/1.1" 200 None
+[2025-09-12 23:38:23,895] [INFO] [app.utils.google_factcheck]: Google Fact Check: 2 items from factly.in for 'old image shared as recent'
+[2025-09-12 23:38:23,899] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-12 23:38:24,396] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=indiatoday.in HTTP/1.1" 200 None
+[2025-09-12 23:38:24,405] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-12 23:38:24,911] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=aajtak.in HTTP/1.1" 200 None
+[2025-09-12 23:38:24,919] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): factchecktools.googleapis.com:443
+[2025-09-12 23:38:25,407] [DEBUG] [urllib3.connectionpool]: https://factchecktools.googleapis.com:443 "GET /v1alpha1/claims:search?query=old+image+shared+as+recent&pageSize=10&key=AIzaSyArJXJBH4qFFhc_K944f2aSjyWrOrqnR1Q&reviewPublisherSiteFilter=afp.com HTTP/1.1" 200 None
