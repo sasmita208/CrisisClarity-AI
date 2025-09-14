@@ -1,24 +1,18 @@
-import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-
-# 🔹 Import news + fact-check helpers
+import torch
 from app.utils.news_api import search_news
 from app.utils.scraper import fetch_factchecks
 
 MODEL_NAME = "Pulk17/Fake-News-Detection"
 
-# Load model + tokenizer once at startup
+# Load model once
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 
 labels = ["Fake", "Real"]
 
 def verify_text_claim(text: str):
-    """
-    Runs fake news detection on input text.
-    Returns verdict (Fake/Real), confidence score, and evidence links.
-    """
-    # ---- Model prediction ----
+    # ---- Step 1: ML prediction ----
     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
     with torch.no_grad():
         outputs = model(**inputs)
@@ -28,22 +22,24 @@ def verify_text_claim(text: str):
     verdict = labels[verdict_index]
     confidence = float(predictions[0][verdict_index])
 
-    # ---- Evidence gathering ----
     evidence_links = []
 
-    # News API articles
+    # ---- Step 2: News API evidence ----
     try:
         articles = search_news(text) or []
-        # Extract only URLs if dicts
         urls = [a["url"] for a in articles if isinstance(a, dict) and "url" in a]
         evidence_links.extend(urls)
     except Exception as e:
         print(f"[WARN] NewsAPI failed: {e}")
 
-    # Fact-check scrapers (PIB / AltNews)
+    # ---- Step 3: Fact-check scraper ----
     try:
-        factcheck_urls = fetch_factchecks(text) or []
-        evidence_links.extend(factcheck_urls)
+        factcheck_hits = fetch_factchecks(text) or []
+        if factcheck_hits:
+            # Override ML with trusted verdict
+            verdict = factcheck_hits[0]["verdict"]
+            confidence = 0.99
+            evidence_links.extend([hit["url"] for hit in factcheck_hits])
     except Exception as e:
         print(f"[WARN] Scraper failed: {e}")
 

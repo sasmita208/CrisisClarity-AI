@@ -1,12 +1,14 @@
+# app/utils/scraper.py
 import logging
 import requests
 from bs4 import BeautifulSoup
 import feedparser
 from urllib.parse import urljoin
+from difflib import SequenceMatcher
 
 logger = logging.getLogger(__name__)
 
-# ------------------ Sources ------------------
+# Sources
 PIB_URL = "https://pib.gov.in/factcheck.aspx"
 FEEDS = {
     "AltNews": "https://www.altnews.in/feed/",
@@ -14,80 +16,73 @@ FEEDS = {
     "Factly": "https://factly.in/feed/",
 }
 
-# ------------------ Helpers ------------------
+# -------- Helpers --------
 def _variants(q: str) -> list[str]:
-    """
-    Generate simple query variants to improve matching.
-    Example: "NASA Moon Mission" -> ["nasa moon mission", "nasa", "moon mission"]
-    """
+    """Generate simple query variants to improve matching."""
     base = (q or "").strip()
     low = base.lower()
     words = low.split()
 
     variants = {low}
+    if len(words) > 2:
+        variants.add(" ".join(words[:2]))
+        variants.add(" ".join(words[-2:]))
+    return list(variants)
 
-    # drop common stopwords to allow partial matches
-    stops = {"the", "a", "an", "in", "on", "of", "for"}
-    filtered = [w for w in words if w not in stops]
-    if filtered:
-        variants.add(" ".join(filtered))
+def _similarity(a: str, b: str) -> float:
+    return SequenceMatcher(None, a.lower(), b.lower()).ratio()
 
-    # add single keywords for broader match
-    variants.update(filtered)
+def _filter_factcheck_links(href: str) -> bool:
+    """Return True only if link is likely a fact-check article/PDF."""
+    if not href:
+        return False
+    href = href.lower()
+    if "factcheck" in href or href.endswith(".pdf"):
+        return True
+    return False
 
-    return variants
-
-# ------------------ Main Function ------------------
-def fetch_factchecks(query: str, limit: int = 5):
-    """
-    Search PIB + AltNews/BOOM/Factly feeds for fact-checks related to query.
-    Returns a list of dicts: {title, url, source}.
-    """
+# -------- Main scraper --------
+def fetch_factchecks(query: str) -> list[str]:
+    """Fetch fact-check articles from PIB, AltNews, BOOM, Factly."""
     results = []
     variants = _variants(query)
 
-    # --- PIB Fact Check page (HTML scraping) ---
-    try:
-        resp = requests.get(PIB_URL, timeout=10)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "lxml")
-
-        for a in soup.select("a"):
-            title = a.get_text(strip=True)
-            href = a.get("href")
-            if not href or not title:
-                continue
-
-            for v in variants:
-                if v in title.lower():
-                    results.append({
-                        "title": title,
-                        "url": urljoin(PIB_URL, href),
-                        "source": "PIB"
-                    })
-                    break
-        logger.info(f"PIB hits: {len(results)}")
-    except Exception as e:
-        logger.warning(f"PIB scrape error: {e}")
-
-    # --- RSS feeds (AltNews, BOOM, Factly) ---
+    # ---- RSS feeds (AltNews / BOOM / Factly) ----
     for name, feed_url in FEEDS.items():
         try:
-            parsed = feedparser.parse(feed_url)
-            for entry in parsed.entries[:limit]:
-                title = entry.title
-                link = entry.link
-                desc = getattr(entry, "summary", "")
+            d = feedparser.parse(feed_url)
+            for entry in d.entries[:20]:
+                title = entry.get("title", "")
+                link = entry.get("link", "")
+                if not link:
+                    continue
+                for v in variants:
+                    ratio = _similarity(v, title)
+                    if ratio > 0.3:
+                        logger.info(f"{name} matched {v} with {title} ({ratio:.2f})")
+                        results.append(link)
+        except Exception as e:
+            logger.warning(f"Feed {name} failed: {e}")
+
+    # ---- PIB factcheck page ----
+    try:
+        r = requests.get(PIB_URL, timeout=10)
+        if r.status_code == 200:
+            soup = BeautifulSoup(r.text, "lxml")
+            for a in soup.select("a[href]"):
+                title = a.get_text(strip=True)
+                href = urljoin(PIB_URL, a["href"])
+
+                if not _filter_factcheck_links(href):
+                    continue
 
                 for v in variants:
-                    if v in title.lower() or v in desc.lower():
-                        results.append({
-                            "title": title,
-                            "url": link,
-                            "source": name
-                        })
-                        break
-        except Exception as e:
-            logger.warning(f"{name} RSS error: {e}")
+                    ratio = _similarity(v, title)
+                    if ratio > 0.3:
+                        logger.info(f"PIB matched {v} with {title} ({ratio:.2f})")
+                        results.append(href)
+    except Exception as e:
+        logger.warning(f"PIB fetch failed: {e}")
 
-    return results[:limit]
+    # Deduplicate
+    return [{"url": href, "verdict": "Fake"} for href in results]
