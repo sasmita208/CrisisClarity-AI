@@ -32,7 +32,7 @@ def verify_text_claim(text: str):
     except Exception as e:
         print(f"[WARN] NewsAPI failed: {e}")
 
-    # ---- Step 3: Fact-check scraper ----
+    # ---- Step 3: Fact-check scraper (trusted override) ----
     try:
         factcheck_hits = fetch_factchecks(text) or []
         if factcheck_hits:
@@ -42,6 +42,9 @@ def verify_text_claim(text: str):
             evidence_links.extend([hit["url"] for hit in factcheck_hits])
     except Exception as e:
         print(f"[WARN] Scraper failed: {e}")
+
+    # ---- Deduplicate links ----
+    evidence_links = list(dict.fromkeys(evidence_links))
 
     return {
         "verdict": verdict,
