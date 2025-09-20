@@ -36,8 +36,7 @@ def verify_text_claim(text: str):
     try:
         factcheck_hits = fetch_factchecks(text) or []
         if factcheck_hits:
-            # Override ML with trusted verdict
-            verdict = factcheck_hits[0]["verdict"]
+            verdict = factcheck_hits[0]["verdict"]  # trusted override
             confidence = 0.99
             evidence_links.extend([hit["url"] for hit in factcheck_hits])
     except Exception as e:
