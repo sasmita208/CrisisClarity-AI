@@ -19,3 +19,13 @@ CrisisClarity AI is an AI-powered platform for detecting misinformation related 
 - Python 3.11+  
 - Node.js 18+ / npm 9+  
 - pip / yarn  
+
+1. Navigate to backend folder:
+```bash
+cd CrisisClarity-AI
+
+2.Create a virtual environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # macOS/Linux
+.venv\Scripts\activate     # Windows
