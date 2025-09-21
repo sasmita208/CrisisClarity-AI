@@ -6,8 +6,7 @@ CrisisClarity AI is an AI-powered platform for detecting misinformation related 
 ## Features
 
 - **Disaster & Crisis Verification**: Detect fake or misleading claims during emergencies.  
-- **Text Verification**: Analyze textual claims and messages.  
-- **URL Verification**: Check external links or social media posts.  
+- **Text Verification**: Analyze textual claims and messages.   
 - **Fact Cards**: Summarized AI-powered analysis with evidence sources.  
 - **Confidence Scores**: Provide numerical confidence for each prediction.  
 - **Multi-source Evidence**: Cross-reference data with credible fact-checking sources and government releases.  
@@ -31,3 +30,13 @@ python -m venv .venv
 source .venv/bin/activate  # macOS/Linux
 .venv\Scripts\activate     # Windows
 ```
+Backend runs on: http://127.0.0.1:8000
+
+3. Frontend Setup
+```bash
+cd frontend
+npm i
+npm run dev
+```
+Frontend runs on: http://localhost:8080
+
