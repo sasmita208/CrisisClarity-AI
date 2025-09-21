@@ -77,6 +77,7 @@ import Header from "@/components/Header";
 import InputSection from "@/components/InputSection";
 import ResultsSection from "@/components/ResultsSection";
 import { useToast } from "@/hooks/use-toast";
+import { text } from "stream/consumers";
 
 // Align with ResultsSection expected types
 interface Result {
@@ -112,7 +113,7 @@ const Index = () => {
       const response = await fetch("http://127.0.0.1:8000/verify_text", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ claim: data }),
+        body: JSON.stringify({ text: data }),
       });
 
       if (!response.ok) throw new Error("Failed to fetch analysis");

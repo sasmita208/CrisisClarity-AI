@@ -22,7 +22,7 @@ class TextResponse(BaseModel):
     evidence_links: List[EvidenceItem]
 
 # -------- Route --------
-@router.post("/verify_text/", response_model=TextResponse)
+@router.post("/verify_text", response_model=TextResponse)
 def verify_text_endpoint(request: TextInput):
     result = verify_text_claim(request.text)
 
