@@ -2,6 +2,7 @@
 
 CrisisClarity AI is an AI-powered platform for detecting misinformation related to **crises and disasters**. It helps individuals, organizations, and authorities quickly verify the authenticity of claims, alerts, and posts during emergency situations. The system analyzes both text and URLs and provides confidence scores with source references to support rapid decision-making.
 
+🌐: https://crisis-clarity-ai.vercel.app/
 ---
 ## Features
 
@@ -39,4 +40,5 @@ npm i
 npm run dev
 ```
 Frontend runs on: http://localhost:8080
+
 
